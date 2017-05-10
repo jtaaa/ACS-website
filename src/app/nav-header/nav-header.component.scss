@@ -1,5 +1,10 @@
 @import "../../assets/styles/_breakpoints";
 
+h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
 .navbar {
   min-height: 50px;
 }
@@ -65,11 +70,6 @@
   @include gt-tablet {
     display: inline-block;
   };
-
-  h2 {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
 }
 
 #menu-icon {
@@ -137,7 +137,7 @@
 .menu {
   opacity: 0;
   position: absolute;
-  padding-top: 100px;
+  padding-top: 45%;
   left: 0;
   right: 0;
   top: 0;
@@ -152,8 +152,19 @@
   @include gt-tablet {
     display: none;
   };
+
+  .menu-item {
+    transform: scale(1.2, 2);
+
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
 }
 
 .show {
   opacity: 1;
+
+  .menu-item {
+    transform: scale(1, 1);
+  }
 }
