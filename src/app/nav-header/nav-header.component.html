@@ -11,7 +11,9 @@
 
     <li class="link-li">
       <div *ngFor="let link of links" class="link-container">
-        <h2>{{ link.name }}</h2>
+        <a [routerLink]="[link.link]">
+          <h2>{{ link.name }}</h2>
+        </a>
       </div>
     </li>
   </ul>
@@ -25,7 +27,9 @@
 
   <div class="menu" [class.show]="menuActive">
     <div *ngFor="let link of links" class="menu-item">
-      <h2>{{ link.name }}</h2>
+      <a [routerLink]="[link.link]">
+        <h2>{{ link.name }}</h2>
+      </a>
     </div>
   </div>
 
