@@ -1,3 +1,32 @@
-<p>
-  nav-header works!
-</p>
+<div class="container navbar" style="background: gray;">
+  <ul class="navigation-bar">
+    <li class="logo-li">
+      <div class="logo-img-container">
+        <img class="circle-img logo-img" src="../../assets/images/UW-ACS-logo-white.png" alt="ACS Logo">
+      </div>
+      <div class="logo-text-container">
+        <h1>UW-ACS</h1>
+      </div>
+    </li>
+
+    <li class="link-li">
+      <div *ngFor="let link of links" class="link-container">
+        <h2>{{ link.name }}</h2>
+      </div>
+    </li>
+  </ul>
+
+  <div id="menu-icon" (click)="toggleMenu()" [class.open]="menuActive">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="menu" [class.show]="menuActive">
+    <div *ngFor="let link of links" class="menu-item">
+      <h2>{{ link.name }}</h2>
+    </div>
+  </div>
+
+</div>

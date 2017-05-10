@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/_breakpoints";
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+/* Font variables */
+$header-font: 'Oxygen', sans-serif;
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: white;
+}
+
+div {
+  overflow: auto;
+}
+
+h1 {
+  font-family: $header-font;
+  font-size: 48px;
+  font-weight: thick;
+}
+
+h2 {
+  font-family: $header-font;
+  font-size: 30px;
+  font-weight: thick;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include gt-tablet {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 850px;
+  };
+}
+
+
+.circle-img {
+  border-radius: 50%;
+}
