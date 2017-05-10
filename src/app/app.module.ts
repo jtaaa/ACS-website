@@ -6,11 +6,13 @@ import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import { NavHeaderComponent } from './nav-header/nav-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    NavHeaderComponent
   ],
   imports: [
     BrowserModule,
