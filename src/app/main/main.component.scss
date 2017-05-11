@@ -1,0 +1,10 @@
+.app-header {
+  /* The image used */
+  background-image: url("../../assets/images/sunset.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
