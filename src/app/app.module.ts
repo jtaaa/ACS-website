@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { SocialLinksComponent } from './social-links/social-links.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    NavHeaderComponent
+    NavHeaderComponent,
+    SocialLinksComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+@import "../../assets/styles/_breakpoints";
+
+.social-container {
+  display: inline-block;
+  float: right;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 5px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: top;
+
+    @include gt-tablet {
+      width: 32px;
+      height: 32px;
+    };
+  }
+}
