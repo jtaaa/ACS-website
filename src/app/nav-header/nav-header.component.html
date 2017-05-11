@@ -25,8 +25,8 @@
     <span></span>
   </div>
 
-  <div class="menu" [class.show]="menuActive">
-    <div *ngFor="let link of links" class="menu-item">
+  <div class="menu" *ngIf="menuActive" [@fade-in]="'in'">
+    <div *ngFor="let link of links" class="menu-item" [@shrink-in]="'in'">
       <a [routerLink]="[link.link]">
         <h2>{{ link.name }}</h2>
       </a>
