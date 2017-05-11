@@ -14,6 +14,39 @@
   };
 }
 
+.back-image {
+  height: 0;
+  padding-top: 37.5%;
+  text-align: center;
+  position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-size: 100% auto;
+  background-attachment: scroll;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @include gt-tablet {
+    background-attachment: fixed;
+  };
+}
+
+.back-image-content {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+
+  h1 {
+    color: white;
+    text-shadow: 1px 2px 3px #666;
+    font-size: 32px;
+    font-weight: 2000;
+    margin-top: 16%;
+
+    @include gt-tablet {
+      font-size: 64px;
+    };
+  }
+}
+
 .spacer {
 
   @include gt-tablet{
