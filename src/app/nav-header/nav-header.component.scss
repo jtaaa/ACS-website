@@ -73,6 +73,7 @@ h2 {
 }
 
 #menu-icon {
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
   width: 32px;
   height: 45px;
   position: absolute;
@@ -132,7 +133,6 @@ h2 {
     left: 50%;
   }
 }
-
 
 .menu {
   position: absolute;
