@@ -1,3 +1,5 @@
+@import "../../assets/styles/_breakpoints";
+
 .app-header {
   /* The image used */
   background-image: url("../../assets/images/sunset.jpg");
@@ -7,6 +9,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.spacer {
+
+  @include gt-tablet{
+    height: 100px;
+  };
 }
 
 .social-container {
