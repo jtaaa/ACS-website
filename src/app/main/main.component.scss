@@ -1,14 +1,17 @@
 @import "../../assets/styles/_breakpoints";
 
 .app-header {
-  /* The image used */
   background-image: url("../../assets/images/sunset.jpg");
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include gt-tablet {
+    background-attachment: fixed;
+  };
 }
 
 .spacer {
@@ -21,4 +24,55 @@
 .social-container {
   background: white;
   padding: 4px;
+}
+
+.main-body {
+  color: black;
+
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 1em;
+
+    @include gt-tablet{
+      font-size: 48px;
+    };
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: thick;
+    text-decoration: underline;
+    margin-top: 2em;
+    margin-left: 20px;
+
+    @include gt-tablet{
+      font-size: 32px;
+    };
+  }
+
+  p {
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+
+.button {
+  text-align: center;
+
+  a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    cursor: pointer;
+
+    @include gt-tablet {
+      font-size: 18px;
+    };
+  }
 }

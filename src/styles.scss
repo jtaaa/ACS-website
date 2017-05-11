@@ -34,7 +34,19 @@ h2 {
   };
 }
 
+p {
+  font-family: $header-font;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include gt-tablet {
+    font-size: 24px;
+  };
+}
+
 a {
+  font-family: $header-font;
   color: white;
   text-decoration: none;
 }
