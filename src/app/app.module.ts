@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { SocialLinksComponent } from './social-links/social-links.component';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     NavHeaderComponent,
-    SocialLinksComponent
+    SocialLinksComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
