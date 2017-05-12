@@ -1,8 +1,10 @@
 <div class="slideshow-container">
   <div class="img-container">
-    <div class="ss-button left"><p><</p></div>
-    <div class="ss-button right"><p>></p></div>
-    <img src="../../assets/images/slideshow/shankjoshdylan.jpg" alt="Pic 1">
+    <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>
+    <div class="ss-button right" (click)='scrollRight()'><p>></p></div>
+    <ng-container *ngFor="let image of images" >
+      <img *ngIf="image.pos == curPos" src="{{ image.src }}" alt="Pic {{ image.pos }}">
+    </ng-container>
   </div>
 </div>
 <div>
