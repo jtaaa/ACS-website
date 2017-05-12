@@ -148,3 +148,30 @@
     }
   }
 }
+
+ul {
+  width: 57px;
+  margin: auto;
+  padding-left: 0;
+
+  @include gt-tablet {
+    width: 68px;
+    margin-top: 10px;
+  };
+}
+
+.dot {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background-color: grey;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+
+  @include gt-tablet {
+    height: 8px;
+    width: 8px;
+  };
+}
