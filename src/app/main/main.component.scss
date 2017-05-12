@@ -25,10 +25,6 @@
   background-attachment: scroll;
   background-position: bottom;
   background-repeat: no-repeat;
-
-  @include gt-tablet {
-    background-attachment: fixed;
-  };
 }
 
 .back-image-content {
@@ -107,5 +103,48 @@
     @include gt-tablet {
       font-size: 18px;
     };
+  }
+}
+
+.slideshow-container {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+  background-color: grey;
+
+  .img-container {
+    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+    }
+
+    .ss-button {
+      text-align: center;
+      height: 100%;
+      display: table;
+      background: rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+
+      p {
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+      }
+
+    }
+
+    .left {
+      position: absolute;
+      left: 0;
+    }
+    .right {
+      position: absolute;
+      right: 0;
+    }
   }
 }
