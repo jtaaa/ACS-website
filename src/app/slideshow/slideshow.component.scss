@@ -44,12 +44,10 @@
 }
 
 ul {
-  width: 57px;
-  margin: auto;
+  text-align: center;
   padding-left: 0;
 
   @include gt-tablet {
-    width: 68px;
     margin-top: 10px;
   };
 }

@@ -11,7 +11,7 @@ export class SlideshowComponent implements OnInit {
 
   images: Object[];
 
-  curPos: number = 3;
+  curPos: number = 4;
 
   constructor() {
 
@@ -31,6 +31,18 @@ export class SlideshowComponent implements OnInit {
       {
         src: IMG_PATH + 'kern.jpg',
         pos: 4
+      },
+      {
+        src: IMG_PATH + 'me.jpg',
+        pos: 5
+      },
+      {
+        src: IMG_PATH + 'adam2.jpg',
+        pos: 6
+      },
+      {
+        src: IMG_PATH + 'tim.jpg',
+        pos: 7
       }
     ]
   }
