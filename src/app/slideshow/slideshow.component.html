@@ -11,7 +11,8 @@
   <ul>
     <ng-container *ngFor="let image of images">
       <li class="dot"
-      [style.background-color]="image.pos == curPos ? 'red' : 'black'">
+      [style.background-color]="image.pos == curPos ? 'red' : 'black'"
+      (click)="gotoPos(image.pos)">
     </ng-container>
   </ul>
 </div>

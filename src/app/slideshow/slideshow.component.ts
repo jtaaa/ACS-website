@@ -66,5 +66,8 @@ export class SlideshowComponent implements OnInit {
       console.log('No where to go right!')
     }
   }
+  gotoPos(pos) {
+    this.curPos = pos;
+  }
 
 }
