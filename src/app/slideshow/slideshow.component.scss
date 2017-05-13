@@ -14,14 +14,16 @@
       width: 100%;
       height: 100%;
       vertical-align: top;
+      position: absolute;
     }
 
     .ss-button {
       text-align: center;
       height: 100%;
       display: table;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.1);
       cursor: pointer;
+      z-index: 10;
 
       p {
         margin: 0 auto;
@@ -33,7 +35,7 @@
     }
 
     .ss-button:active {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .left {

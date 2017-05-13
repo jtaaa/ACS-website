@@ -1,9 +1,11 @@
 <div class="slideshow-container noselect">
   <div class="img-container">
-    <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>
-    <div class="ss-button right" (click)='scrollRight()'><p>></p></div>
     <ng-container *ngFor="let image of images" >
-      <img *ngIf="image.pos == curPos" src="{{ image.src }}" alt="Pic {{ image.pos }}">
+      <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>
+      <div class="ss-button right" (click)='scrollRight()'><p>></p></div>
+      <img src="{{ image.src }}"
+      [@scroll-slideshow]="image.state"
+      alt="Pic {{ image.pos }}">
     </ng-container>
   </div>
 </div>
