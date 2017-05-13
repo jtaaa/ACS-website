@@ -9,9 +9,9 @@
 </div>
 <div>
   <ul>
-    <li class="dot"></li>
-    <li class="dot"></li>
-    <li class="dot"></li>
-    <li class="dot"></li>
+    <ng-container *ngFor="let image of images">
+      <li class="dot"
+      [style.background-color]="image.pos == curPos ? 'red' : 'black'">
+    </ng-container>
   </ul>
 </div>
