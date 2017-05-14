@@ -53,54 +53,74 @@ export class MainComponent implements OnInit {
     ]
 
     this.events = [
-      [
-        {
-          src: IMG_PATH + 'events/GBM.jpg',
-          pos: 1,
-          state: 'center'
-        },
-        {
-          src: IMG_PATH + 'events/fallforthecaribbean.jpg',
-          pos: 2,
-          state: 'right'
-        }
-      ],
-      [
-        {
-          src: IMG_PATH + 'events/fallforthecaribbean.jpg',
-          pos: 1,
-          state: 'center'
-        },
-        {
-          src: IMG_PATH + 'events/GBM.jpg',
-          pos: 2,
-          state: 'right'
-        }
-      ],
-      [
-        {
-          src: IMG_PATH + 'events/caribbeanpulse.jpg',
-          pos: 1,
-          state: 'center'
-        },
-        {
-          src: IMG_PATH + 'events/GBM.jpg',
-          pos: 2,
-          state: 'right'
-        }
-      ],
-      [
-        {
-          src: IMG_PATH + 'events/backtothecaribbean.png',
-          pos: 1,
-          state: 'center'
-        },
-        {
-          src: IMG_PATH + 'events/GBM.jpg',
-          pos: 2,
-          state: 'right'
-        }
-      ]
+      {
+        images: [
+          {
+            src: IMG_PATH + 'events/GBM.jpg',
+            pos: 1,
+            state: 'center'
+          },
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            pos: 2,
+            state: 'right'
+          }
+        ],
+        title: "Our first General Body Meeting for the Spring Term 2017!",
+        description: `Come out and meet us. You get to meet all the new exec and we
+                      will be voting in some new exec members for this Spring term.`
+      },
+      {
+        images: [
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            pos: 1,
+            state: 'center'
+          },
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            pos: 2,
+            state: 'right'
+          }
+        ],
+        title: "Our annual Fall formal Dinner, Fall 2017!",
+        description: `Come out and meet us. You get to meet all the new exec and we
+                      will be voting in some new exec members for this Spring term.`
+      },
+      {
+        images: [
+          {
+            src: IMG_PATH + 'events/caribbeanpulse.jpg',
+            pos: 1,
+            state: 'center'
+          },
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            pos: 2,
+            state: 'right'
+          }
+        ],
+        title: "Caribbean Pulse - The Heartbeat of the Islands",
+        description: `Come out and meet us. You get to meet all the new exec and we
+                      will be voting in some new exec members for this Spring term.`
+      },
+      {
+        images: [
+          {
+            src: IMG_PATH + 'events/backtothecaribbean.png',
+            pos: 1,
+            state: 'center'
+          },
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            pos: 2,
+            state: 'right'
+          }
+        ],
+        title: "Back to the Caribbean! For one night only.",
+        description: `Come out and meet us. You get to meet all the new exec and we
+                      will be voting in some new exec members for this Spring term.`
+      }
     ]
   }
 

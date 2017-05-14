@@ -51,9 +51,11 @@
 ul {
   text-align: center;
   padding-left: 0;
+  margin-bottom: 0;
 
   @include gt-tablet {
     margin-top: 10px;
+    margin-bottom: 16px;
   };
 }
 

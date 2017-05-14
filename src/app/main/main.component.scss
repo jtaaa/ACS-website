@@ -143,9 +143,10 @@
 }
 
 .event-description {
-  padding-left: 15px;
+  margin-bottom: 2em;
 
   @include gt-tablet {
+    padding-left: 15px;
     flex-grow: 1;
     max-width: 335px;
   };

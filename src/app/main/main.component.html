@@ -37,12 +37,11 @@
 
   <div *ngFor="let event of events" class="container-lg flexy">
     <div class="event-images">
-      <slideshow [images]="event" heightPercent="37.62"></slideshow>
+      <slideshow [images]="event.images" heightPercent="37.62"></slideshow>
     </div>
     <div class="event-description">
-      <h1>Our first General Body Meeting for the Spring Term 2017!</h1>
-      <p>Come out and meet us. You get to meet all the new exec and we
-         will be voting in some new exec members for this Spring term.</p>
+      <h1>{{ event.title }}</h1>
+      <p>{{ event.description }}</p>
     </div>
   </div>
 </div>
