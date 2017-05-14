@@ -1,4 +1,5 @@
-<div class="slideshow-container noselect">
+<div class="slideshow-container noselect"
+[style.padding-top.%]="heightPercent">
   <div class="img-container">
     <ng-container *ngFor="let image of images" >
       <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>

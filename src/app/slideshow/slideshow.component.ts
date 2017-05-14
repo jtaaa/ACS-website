@@ -35,6 +35,8 @@ export class SlideshowComponent implements OnInit {
 
   @Input() images: any[];
 
+  @Input() heightPercent: number = 56.25;
+
   curPos: number = 1;
 
   constructor() {
