@@ -9,6 +9,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  color: white;
+
   @include gt-tablet {
     background-attachment: fixed;
   };
@@ -57,7 +59,6 @@
 }
 
 .main-body {
-  color: black;
 
   h1 {
     text-align: center;
@@ -105,4 +106,29 @@
       font-size: 18px;
     };
   }
+}
+
+.events {
+  background-color: #D8BABA;
+}
+
+.flexy {
+
+  @include gt-tablet {
+    display: flex;
+  };
+}
+
+.event-images {
+
+  @include gt-tablet {
+    flex-grow: 3;
+  };
+}
+
+.event-description {
+
+  @include gt-tablet {
+    flex-grow: 1;
+  };
 }
