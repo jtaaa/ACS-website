@@ -35,12 +35,14 @@ export class SlideshowComponent implements OnInit {
 
   @Input() images: any[];
 
-  @Input() curPos: number;
+  curPos: number = 1;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.curPos = Math.floor(this.images.length / 2);
+    console.log('Current Position: ' + this.curPos);
   }
 
   scrollLeft() {
