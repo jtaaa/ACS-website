@@ -37,14 +37,12 @@ export class SlideshowComponent implements OnInit {
 
   @Input() heightPercent: number = 56.25;
 
-  curPos: number = 1;
+  @Input() curPos: number = 1;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.curPos = Math.floor(this.images.length / 2);
-    console.log('Current Position: ' + this.curPos);
   }
 
   scrollLeft() {
