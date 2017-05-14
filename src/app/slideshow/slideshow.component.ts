@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   trigger,
   state,
@@ -6,8 +6,6 @@ import {
   animate,
   transition
 } from '@angular/animations';
-
-let IMG_PATH = '../../assets/images/slideshow/'
 
 @Component({
   selector: 'slideshow',
@@ -35,49 +33,11 @@ let IMG_PATH = '../../assets/images/slideshow/'
 })
 export class SlideshowComponent implements OnInit {
 
-  images: any[];
+  @Input() images: any[];
 
-  curPos: number = 4;
+  @Input() curPos: number;
 
   constructor() {
-
-    this.images = [
-      {
-        src: IMG_PATH + 'shankjoshdylan.jpg',
-        pos: 1,
-        state: 'left'
-      },
-      {
-        src: IMG_PATH + 'shots.jpg',
-        pos: 2,
-        state: 'left'
-      },
-      {
-        src: IMG_PATH + 'adam.jpg',
-        pos: 3,
-        state: 'left'
-      },
-      {
-        src: IMG_PATH + 'kern.jpg',
-        pos: 4,
-        state: 'center'
-      },
-      {
-        src: IMG_PATH + 'me.jpg',
-        pos: 5,
-        state: 'right'
-      },
-      {
-        src: IMG_PATH + 'adam2.jpg',
-        pos: 6,
-        state: 'right'
-      },
-      {
-        src: IMG_PATH + 'tim.jpg',
-        pos: 7,
-        state: 'right'
-      }
-    ]
   }
 
   ngOnInit() {
