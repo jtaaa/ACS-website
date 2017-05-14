@@ -26,7 +26,7 @@
 
 <div class="container main-body">
   <h2>The People</h2>
-  <slideshow [images]="peopleImages"></slideshow>
+  <slideshow [images]="peopleImages" curPos="4"></slideshow>
   <p>A group of people that are people and such and such, friends, family, and also here is the exec team too and things also.</p>
 </div>
 
@@ -34,12 +34,15 @@
   <div class="container">
     <h2>The Events</h2>
   </div>
-  <div class="container-lg flexy">
+
+  <div *ngFor="let event of events" class="container-lg flexy">
     <div class="event-images">
-      <slideshow [images]="eventImages" heightPercent="37.62"></slideshow>
+      <slideshow [images]="event" heightPercent="37.62"></slideshow>
     </div>
     <div class="event-description">
-      <p>Hello!!</p>
+      <h1>Our first General Body Meeting for the Spring Term 2017!</h1>
+      <p>Come out and meet us. You get to meet all the new exec and we
+         will be voting in some new exec members for this Spring term.</p>
     </div>
   </div>
 </div>

@@ -109,7 +109,23 @@
 }
 
 .events {
-  background-color: #D8BABA;
+  background-color: #F3F3F3;
+
+  h1 {
+    font-size: 24px;
+
+    @include gt-tablet {
+      font-size: 32px;
+    };
+  }
+
+  p {
+    font-size: 12px;
+
+    @include gt-tablet {
+      font-size: 18px;
+    };
+  }
 }
 
 .flexy {
@@ -127,8 +143,10 @@
 }
 
 .event-description {
+  padding-left: 15px;
 
   @include gt-tablet {
     flex-grow: 1;
+    max-width: 335px;
   };
 }

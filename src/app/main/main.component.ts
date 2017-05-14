@@ -10,7 +10,7 @@ let IMG_PATH = '../../assets/images/'
 export class MainComponent implements OnInit {
 
   peopleImages: any[];
-  eventImages:  any[];
+  events: any[];
 
   constructor() {
 
@@ -52,17 +52,55 @@ export class MainComponent implements OnInit {
       }
     ]
 
-    this.eventImages = [
-      {
-        src: IMG_PATH + 'events/GBM.jpg',
-        pos: 1,
-        state: 'center'
-      },
-      {
-        src: IMG_PATH + 'events/fallforthecaribbean.jpg',
-        pos: 2,
-        state: 'right'
-      }
+    this.events = [
+      [
+        {
+          src: IMG_PATH + 'events/GBM.jpg',
+          pos: 1,
+          state: 'center'
+        },
+        {
+          src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+          pos: 2,
+          state: 'right'
+        }
+      ],
+      [
+        {
+          src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+          pos: 1,
+          state: 'center'
+        },
+        {
+          src: IMG_PATH + 'events/GBM.jpg',
+          pos: 2,
+          state: 'right'
+        }
+      ],
+      [
+        {
+          src: IMG_PATH + 'events/caribbeanpulse.jpg',
+          pos: 1,
+          state: 'center'
+        },
+        {
+          src: IMG_PATH + 'events/GBM.jpg',
+          pos: 2,
+          state: 'right'
+        }
+      ],
+      [
+        {
+          src: IMG_PATH + 'events/backtothecaribbean.png',
+          pos: 1,
+          state: 'center'
+        },
+        {
+          src: IMG_PATH + 'events/GBM.jpg',
+          pos: 2,
+          state: 'right'
+        }
+      ]
     ]
   }
 
