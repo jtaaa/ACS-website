@@ -126,5 +126,9 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  toInt(s) {
+    return parseInt(s);
+  }
 
 }
