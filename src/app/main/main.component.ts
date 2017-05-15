@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-let IMG_PATH = '../../assets/images/'
+let IMG_PATH = './assets/images/'
 
 @Component({
   selector: 'app-main',
@@ -126,7 +126,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   toInt(s) {
     return parseInt(s);
   }

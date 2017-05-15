@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-let IMG_PATH: string = '../../assets/images/social/';
+let IMG_PATH: string = './assets/images/social/';
 
 @Component({
   selector: 'social-links',
