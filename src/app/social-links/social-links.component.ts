@@ -16,17 +16,17 @@ export class SocialLinksComponent implements OnInit {
     this.socialLinks = [
       {
         name: 'Facebook',
-        link: 'Facebook.com',
+        link: 'https://www.facebook.com/uWaterlooACS/',
         src: IMG_PATH + 'facebook-black.svg'
       },
       {
         name: 'Instagram',
-        link: 'instagram.com',
+        link: 'https://www.instagram.com/uwaterlooacs/',
         src: IMG_PATH + 'instagram-black.svg'
       },
       {
         name: 'Snapchat',
-        link: 'Snapchat.com',
+        link: IMG_PATH + 'snapcode.png',
         src: IMG_PATH + 'snapchat-black.svg'
       }
     ]
