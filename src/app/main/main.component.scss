@@ -30,18 +30,23 @@
 }
 
 .back-image-content {
+  display: table;
   position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 
   h1 {
     color: white;
     text-shadow: 1px 2px 3px #666;
     font-size: 28px;
     font-weight: 2000;
-    margin-top: 14%;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
 
     @include gt-tablet {
       font-size: 76px;
-      margin-top: 15%;
     };
   }
 }
