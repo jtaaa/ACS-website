@@ -13,8 +13,8 @@ import {
   styleUrls: ['./slideshow.component.scss'],
   animations: [
     trigger('scroll-slideshow', [
-      state('left',   style({ transform: 'translateX(-100%)' })),
-      state('right',  style({ transform: 'translateX(100%)'  })),
+      state('left',   style({ transform: 'translateX(-100%)', display: 'none' })),
+      state('right',  style({ transform: 'translateX(100%)',  display: 'none' })),
       state('center', style({ transform: 'translateX(0)'     })),
       transition('left => center', [
         animate('0.2s 50ms ease-out')

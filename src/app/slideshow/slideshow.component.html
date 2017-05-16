@@ -1,13 +1,13 @@
 <div class="slideshow-container noselect"
 [style.padding-top.%]="heightPercent">
-  <div class="img-container">
+  <div class="img-container"
+  (swipeleft)='scrollRight()' (swipeRight)='scrollLeft()'>
+    <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>
+    <div class="ss-button right" (click)='scrollRight()'><p>></p></div>
     <ng-container *ngFor="let image of images">
-      <div class="ss-button left"  (click)='scrollLeft()' ><p><</p></div>
-      <div class="ss-button right" (click)='scrollRight()'><p>></p></div>
       <img src="{{ image.src }}"
       [@scroll-slideshow]="image.state"
-      alt="Pic {{ image.pos }}"
-      (swipeleft)='scrollRight()' (swipeRight)='scrollLeft()'>
+      alt="Pic {{ image.pos }}">
     </ng-container>
   </div>
 </div>
