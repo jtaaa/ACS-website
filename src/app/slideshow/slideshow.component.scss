@@ -4,48 +4,47 @@
   position: relative;
   height: 0;
   background-color: grey;
+}
 
-  .img-container {
-    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
-    overflow: hidden;
+.img-container {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  overflow: hidden;
 
-    img {
-      width: 100%;
-      height: 100%;
-      vertical-align: top;
-      position: absolute;
-    }
-
-    .ss-button {
-      text-align: center;
-      height: 100%;
-      display: table;
-      background: rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      z-index: 10;
-
-      p {
-        margin: 0 auto;
-        display: table-cell;
-        vertical-align: middle;
-        color: white;
-      }
-
-    }
-
-    .ss-button:active {
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .left {
-      position: absolute;
-      left: 0;
-    }
-    .right {
-      position: absolute;
-      right: 0;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    position: absolute;
   }
+}
+
+.ss-button {
+  text-align: center;
+  height: 100%;
+  display: table;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 10;
+
+  p {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+  }
+}
+
+.ss-button:active {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+.right {
+  position: absolute;
+  right: 0;
 }
 
 ul {
