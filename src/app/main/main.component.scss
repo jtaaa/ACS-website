@@ -103,7 +103,7 @@
     color: white;
     font-size: 14px;
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 4em;
     cursor: pointer;
 
@@ -130,6 +130,10 @@
     @include gt-tablet {
       font-size: 18px;
     };
+  }
+
+  .button {
+    margin-top: -2em;
   }
 }
 
