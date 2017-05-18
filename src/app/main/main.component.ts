@@ -61,7 +61,7 @@ export class MainComponent implements OnInit {
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            src: IMG_PATH + 'events/GBM_people.jpg',
             pos: 2,
             state: 'right'
           }
@@ -118,8 +118,7 @@ export class MainComponent implements OnInit {
           }
         ],
         title: "Back to the Caribbean! For one night only.",
-        description: `Come out and meet us. You get to meet all the new exec and we
-                      will be voting in some new exec members for this Spring term.`
+        description: `Its that time again! Join ACS as we heat up The Bombshelter Pub on the 10th of February for Back to the Caribbean!`
       }
     ]
   }
