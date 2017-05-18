@@ -77,17 +77,17 @@ export class MainComponent implements OnInit {
       {
         images: [
           {
-            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean.jpg',
             pos: 1,
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean_portrait.jpg',
+            src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean_portrait.jpg',
             pos: 2,
             state: 'right'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean_food.jpg',
+            src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean_food.jpg',
             pos: 3,
             state: 'right'
           }
@@ -99,22 +99,22 @@ export class MainComponent implements OnInit {
       {
         images: [
           {
-            src: IMG_PATH + 'events/caribbeanpulse.jpg',
+            src: IMG_PATH + 'events/caribbeanpulse/caribbeanpulse.jpg',
             pos: 1,
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/caribbeanpulse-flags.jpg',
+            src: IMG_PATH + 'events/caribbeanpulse/caribbeanpulse-flags.jpg',
             pos: 2,
             state: 'right'
           },
           {
-            src: IMG_PATH + 'events/caribbeanpulse-shank.jpg',
+            src: IMG_PATH + 'events/caribbeanpulse/caribbeanpulse-shank.jpg',
             pos: 3,
             state: 'right'
           },
           {
-            src: IMG_PATH + 'events/caribbeanpulse-people.jpg',
+            src: IMG_PATH + 'events/caribbeanpulse/caribbeanpulse-people.jpg',
             pos: 4,
             state: 'right'
           }
@@ -125,17 +125,17 @@ export class MainComponent implements OnInit {
       {
         images: [
           {
-            src: IMG_PATH + 'events/backtothecaribbean.jpg',
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean.jpg',
             pos: 1,
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/backtothecaribbean-me.jpg',
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-me.jpg',
             pos: 2,
             state: 'right'
           },
           {
-            src: IMG_PATH + 'events/backtothecaribbean-dari.jpg',
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-dari.jpg',
             pos: 3,
             state: 'right'
           }
