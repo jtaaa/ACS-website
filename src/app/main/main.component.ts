@@ -93,8 +93,8 @@ export class MainComponent implements OnInit {
           }
         ],
         title: "Our annual Fall formal Dinner, Fall 2017!",
-        description: `Come out and meet us. You get to meet all the new exec and we
-                      will be voting in some new exec members for this Spring term.`
+        description: `It is once again time for ACS's annual fall semi-formal event, Fall For the Caribbean.
+                      Join us for some good company, beautiful displays of costume and music and of course, food!`
       },
       {
         images: [
@@ -104,25 +104,39 @@ export class MainComponent implements OnInit {
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            src: IMG_PATH + 'events/caribbeanpulse-flags.jpg',
             pos: 2,
+            state: 'right'
+          },
+          {
+            src: IMG_PATH + 'events/caribbeanpulse-shank.jpg',
+            pos: 3,
+            state: 'right'
+          },
+          {
+            src: IMG_PATH + 'events/caribbeanpulse-people.jpg',
+            pos: 4,
             state: 'right'
           }
         ],
         title: "Caribbean Pulse - The Heartbeat of the Islands",
-        description: `Come out and meet us. You get to meet all the new exec and we
-                      will be voting in some new exec members for this Spring term.`
+        description: `Each semester ACS sells out Bomber and this Fall it is going to be bigger and better with give aways and great music!`
       },
       {
         images: [
           {
-            src: IMG_PATH + 'events/backtothecaribbean.png',
+            src: IMG_PATH + 'events/backtothecaribbean.jpg',
             pos: 1,
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            src: IMG_PATH + 'events/backtothecaribbean-me.jpg',
             pos: 2,
+            state: 'right'
+          },
+          {
+            src: IMG_PATH + 'events/backtothecaribbean-dari.jpg',
+            pos: 3,
             state: 'right'
           }
         ],
