@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
 
   peopleImages: any[];
   events: any[];
+  pastEvents: any[];
 
   constructor() {
 
@@ -50,7 +51,7 @@ export class MainComponent implements OnInit {
         pos: 7,
         state: 'right'
       }
-    ]
+    ];
 
     this.events = [
       {
@@ -69,7 +70,10 @@ export class MainComponent implements OnInit {
         title: "Our first General Body Meeting for the Spring Term 2017!",
         description: `Come out and meet us. You get to meet all the new exec and we
                       will be voting in some new exec members for this Spring term.`
-      },
+      }
+    ];
+
+    this.pastEvents = [
       {
         images: [
           {
@@ -78,8 +82,13 @@ export class MainComponent implements OnInit {
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/fallforthecaribbean.jpg',
+            src: IMG_PATH + 'events/fallforthecaribbean_portrait.jpg',
             pos: 2,
+            state: 'right'
+          },
+          {
+            src: IMG_PATH + 'events/fallforthecaribbean_food.jpg',
+            pos: 3,
             state: 'right'
           }
         ],

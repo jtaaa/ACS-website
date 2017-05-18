@@ -39,15 +39,30 @@
   <div class="container">
     <h2>The Events</h2>
   </div>
+  <div class="container-lg">
 
-  <div *ngFor="let event of events" class="container-lg flexy">
-    <div class="event-images">
-      <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+    <h3>Upcoming Events</h3>
+    <div *ngFor="let event of events" class="flexy">
+      <div class="event-images">
+        <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+      </div>
+      <div class="event-description">
+        <h1>{{ event.title }}</h1>
+        <p>{{ event.description }}</p>
+      </div>
     </div>
-    <div class="event-description">
-      <h1>{{ event.title }}</h1>
-      <p>{{ event.description }}</p>
+
+    <h3>Past Events</h3>
+    <div *ngFor="let event of pastEvents" class="flexy">
+      <div class="event-images">
+        <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+      </div>
+      <div class="event-description">
+        <h1>{{ event.title }}</h1>
+        <p>{{ event.description }}</p>
+      </div>
     </div>
+
   </div>
 
   <div class="button">
