@@ -4,7 +4,7 @@
   background-image: url("../../assets/images/sunset.jpg");
 
   background-attachment: scroll;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -13,7 +13,6 @@
   @include gt-tablet {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: 0 -450px;
   };
 }
 
