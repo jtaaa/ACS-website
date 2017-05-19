@@ -47,16 +47,16 @@ export class NavHeaderComponent implements OnInit {
         link: '/'
       },
       {
-        name: 'About',
-        link: '/about'
-      },
-      {
         name: 'Members',
         link: '/members'
       },
       {
         name: 'Calendar',
         link: '/calendar'
+      },
+      {
+        name: 'About',
+        link: '/about'
       }
     ];
     this.menuActive = false;
