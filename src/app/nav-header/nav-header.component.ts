@@ -44,7 +44,7 @@ export class NavHeaderComponent implements OnInit {
     this.links = [
       {
         name: 'Home',
-        link: '/home'
+        link: '/'
       },
       {
         name: 'About',
