@@ -3,16 +3,17 @@
 .app-header {
   background-image: url("../../assets/images/sunset.jpg");
 
-  /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 
   color: white;
 
   @include gt-tablet {
+    /* Create the parallax scrolling effect */
     background-attachment: fixed;
+    background-position: 0 -450px;
   };
 }
 
@@ -22,33 +23,10 @@
   text-align: center;
   position: relative;
 
-  /* Create the parallax scrolling effect */
   background-size: 100% auto;
   background-attachment: scroll;
   background-position: bottom;
   background-repeat: no-repeat;
-}
-
-.back-image-content {
-  display: table;
-  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-
-  h1 {
-    color: white;
-    text-shadow: 1px 2px 3px #666;
-    font-size: 28px;
-    font-weight: 2000;
-    margin: 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-
-    @include gt-tablet {
-      font-size: 76px;
-    };
-  }
 }
 
 .spacer {
@@ -93,6 +71,28 @@
   p {
     text-align: center;
     margin-top: 1em;
+  }
+}
+
+.back-image-content {
+  display: table;
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    color: white;
+    text-shadow: 1px 2px 3px #666;
+    font-size: 28px;
+    font-weight: 2000;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+
+    @include gt-tablet {
+      font-size: 76px;
+    };
   }
 }
 
