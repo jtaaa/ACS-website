@@ -57,12 +57,12 @@ export class MainComponent implements OnInit {
       {
         images: [
           {
-            src: IMG_PATH + 'events/GBM.jpg',
+            src: IMG_PATH + 'events/GBM/GBM.jpg',
             pos: 1,
             state: 'center'
           },
           {
-            src: IMG_PATH + 'events/GBM_people.jpg',
+            src: IMG_PATH + 'events/GBM/GBM_people.jpg',
             pos: 2,
             state: 'right'
           }
