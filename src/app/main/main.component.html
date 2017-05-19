@@ -11,68 +11,72 @@
   </div>
 </header>
 
-<div class="container main-body">
-  <h2>The Mission</h2>
-  <h1>"To promote Caribbean culture and cultural unity in general within the University community."</h1>
-  <p>The ACS provides entertainment and educational value to students of all backgrounds.</p>
-  <div class="button">
-    <a>Learn More About Us</a>
-  </div>
-</div>
+<div class="main-body">
 
-<div class="back-image" style="background-image: url('./assets/images/caribbean-flags.jpg');">
-  <div class="back-image-content">
-    <h1>Out of Many, One People</h1>
-  </div>
-</div>
-
-<div class="container main-body">
-  <h2>The People</h2>
-  <slideshow [images]="peopleImages" [curPos]="toFloat('4')"></slideshow>
-  <p>The ACS is a group of fun-loving people with similar backgrounds that come together to share their rich cultures.</p>
-  <div class="button">
-    <a>Become a member</a>
-  </div>
-</div>
-
-<div class="events main-body">
   <div class="container">
-    <h2>The Events</h2>
+    <h2>The Mission</h2>
+    <h1>"To promote Caribbean culture and cultural unity in general within the University community."</h1>
+    <p>The ACS provides entertainment and educational value to students of all backgrounds.</p>
+    <div class="button">
+      <a>Learn More About Us</a>
+    </div>
   </div>
-  <div class="container-lg">
 
-    <h3>Upcoming Events</h3>
-    <div *ngFor="let event of events" class="flexy">
-      <div class="event-images">
-        <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+  <div class="back-image" style="background-image: url('./assets/images/caribbean-flags.jpg');">
+    <div class="back-image-content">
+      <h1>Out of Many, One People</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>The People</h2>
+    <slideshow [images]="peopleImages" [curPos]="toFloat('4')"></slideshow>
+    <p>The ACS is a group of fun-loving people with similar backgrounds that come together to share their rich cultures.</p>
+    <div class="button">
+      <a>Become a member</a>
+    </div>
+  </div>
+
+  <div class="events">
+    <div class="container">
+      <h2>The Events</h2>
+    </div>
+    <div class="container-lg">
+
+      <h3>Upcoming Events</h3>
+      <div *ngFor="let event of events" class="flexy">
+        <div class="event-images">
+          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+        </div>
+        <div class="event-description">
+          <h1>{{ event.title }}</h1>
+          <p>{{ event.description }}</p>
+        </div>
       </div>
-      <div class="event-description">
-        <h1>{{ event.title }}</h1>
-        <p>{{ event.description }}</p>
+
+      <h3>Past Events</h3>
+      <div *ngFor="let event of pastEvents" class="flexy">
+        <div class="event-images">
+          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+        </div>
+        <div class="event-description">
+          <h1>{{ event.title }}</h1>
+          <p>{{ event.description }}</p>
+        </div>
       </div>
+
     </div>
 
-    <h3>Past Events</h3>
-    <div *ngFor="let event of pastEvents" class="flexy">
-      <div class="event-images">
-        <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
-      </div>
-      <div class="event-description">
-        <h1>{{ event.title }}</h1>
-        <p>{{ event.description }}</p>
-      </div>
+    <div class="button">
+      <a>Event Calendar</a>
     </div>
-
   </div>
 
-  <div class="button">
-    <a>Event Calendar</a>
+  <div class="container">
+    <p>Follow us on all our social media!</p>
+    <div style="text-align: center;">
+      <social-links></social-links>
+    </div>
   </div>
-</div>
-
-<div class="container main-body">
-  <p>Follow us on all our social media!</p>
-  <div style="text-align: center;">
-    <social-links></social-links>
-  </div>
+  
 </div>
