@@ -19,6 +19,7 @@ import { MainComponent } from './main/main.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { SocialLinksComponent } from './social-links/social-links.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
     MainComponent,
     NavHeaderComponent,
     SocialLinksComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,10 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
       {
         path: '',
         component: MainComponent
+      },
+      {
+        path: 'about',
+        component: AboutPageComponent
       }
     ])
   ],
