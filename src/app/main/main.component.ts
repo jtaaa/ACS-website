@@ -77,6 +77,27 @@ export class MainComponent implements OnInit {
       {
         images: [
           {
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean.jpg',
+            pos: 1,
+            state: 'center'
+          },
+          {
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-me.jpg',
+            pos: 2,
+            state: 'right'
+          },
+          {
+            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-dari.jpg',
+            pos: 3,
+            state: 'right'
+          }
+        ],
+        title: "Back to the Caribbean! For one night only.",
+        description: `Its that time again! Join ACS as we heat up The Bombshelter Pub on the 10th of February for Back to the Caribbean!`
+      },
+      {
+        images: [
+          {
             src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean.jpg',
             pos: 1,
             state: 'center'
@@ -84,11 +105,6 @@ export class MainComponent implements OnInit {
           {
             src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean_portrait.jpg',
             pos: 2,
-            state: 'right'
-          },
-          {
-            src: IMG_PATH + 'events/fallforthecaribbean/fallforthecaribbean_food.jpg',
-            pos: 3,
             state: 'right'
           }
         ],
@@ -121,27 +137,6 @@ export class MainComponent implements OnInit {
         ],
         title: "Caribbean Pulse - The Heartbeat of the Islands",
         description: `Each semester ACS sells out Bomber and this Fall it is going to be bigger and better with give aways and great music!`
-      },
-      {
-        images: [
-          {
-            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean.jpg',
-            pos: 1,
-            state: 'center'
-          },
-          {
-            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-me.jpg',
-            pos: 2,
-            state: 'right'
-          },
-          {
-            src: IMG_PATH + 'events/backtothecaribbean/backtothecaribbean-dari.jpg',
-            pos: 3,
-            state: 'right'
-          }
-        ],
-        title: "Back to the Caribbean! For one night only.",
-        description: `Its that time again! Join ACS as we heat up The Bombshelter Pub on the 10th of February for Back to the Caribbean!`
       }
     ]
   }
