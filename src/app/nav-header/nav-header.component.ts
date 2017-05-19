@@ -47,8 +47,8 @@ export class NavHeaderComponent implements OnInit {
         link: '/home'
       },
       {
-        name: 'Exec-Team',
-        link: '/execs'
+        name: 'About',
+        link: '/about'
       },
       {
         name: 'Members',
