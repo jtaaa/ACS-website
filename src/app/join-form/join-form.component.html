@@ -4,8 +4,8 @@
 
       <div class="form-group">
         <label for="firstName"><h3>First Name</h3></label>
-        <input onClick="this.setSelectionRange(0, this.value.length)"
-         type="text" class="form-control" id="firstName"
+        <input
+        type="text" class="form-control" id="firstName"
         required
         [(ngModel)]="model.firstName" name="firstName"
         placeholder="John"
@@ -18,7 +18,7 @@
 
       <div class="form-group">
         <label for="lastName"><h3>Last Name</h3></label>
-        <input onClick="this.setSelectionRange(0, this.value.length)"
+        <input
          type="text" class="form-control" id="lastName"
         required
         [(ngModel)]="model.lastName" name="lastName"
@@ -32,7 +32,7 @@
 
       <div class="form-group">
         <label for="email"><h3>Email Address</h3></label>
-        <input onClick="this.setSelectionRange(0, this.value.length)"
+        <input
         type="email" class="form-control" id="email"
         required
         [(ngModel)]="model.email" name="email"
@@ -46,8 +46,8 @@
 
       <div class="form-group">
         <label for="studentNumber"><h3>Student Number</h3></label>
-        <input onClick="this.setSelectionRange(0, this.value.length)"
-        type="text" class="form-control" id="studentNumber"
+        <input
+        type="number" min="1" max="100000000" class="form-control" id="studentNumber"
         required
         [(ngModel)]="model.studentNumber" name="studentNumber"
         placeholder="20639709"
