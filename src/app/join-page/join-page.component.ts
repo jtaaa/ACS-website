@@ -13,3 +13,12 @@ export class JoinPageComponent implements OnInit {
   }
 
 }
+
+export class MemberData {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public email: string,
+    public studentNumber: string
+  ) {  }
+}

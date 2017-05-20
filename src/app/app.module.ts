@@ -21,6 +21,7 @@ import { SocialLinksComponent } from './social-links/social-links.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { JoinPageComponent } from './join-page/join-page.component';
+import { JoinFormComponent } from './join-form/join-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { JoinPageComponent } from './join-page/join-page.component';
     SocialLinksComponent,
     SlideshowComponent,
     AboutPageComponent,
-    JoinPageComponent
+    JoinPageComponent,
+    JoinFormComponent
   ],
   imports: [
     BrowserModule,
