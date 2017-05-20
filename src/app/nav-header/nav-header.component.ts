@@ -47,8 +47,8 @@ export class NavHeaderComponent implements OnInit {
         link: '/'
       },
       {
-        name: 'Members',
-        link: '/members'
+        name: 'Join',
+        link: '/join'
       },
       {
         name: 'Calendar',
