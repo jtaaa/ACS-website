@@ -11,6 +11,7 @@ body, html {
   width: 100%;
   margin: 0;
   color: black;
+  font-family: $header-font;
 }
 
 div {
@@ -20,7 +21,7 @@ div {
 h1 {
   font-family: $header-font;
   font-size: 48px;
-  font-weight: thick;
+  font-weight: 800;
 }
 
 h2 {
@@ -30,7 +31,7 @@ h2 {
 
   @include gt-tablet {
     font-size: 30px;
-    font-weight: thick;
+    font-weight: 800;
   };
 }
 
@@ -42,7 +43,7 @@ h3 {
 
   @include gt-tablet {
     font-size: 30px;
-    font-weight: thick;
+    font-weight: 800;
     text-align: left;
   };
 }
