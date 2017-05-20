@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [hidden]="submitted">
     <h1>One of Us!</h1>
     <form (ngSubmit)="onSubmit()" #joinForm="ngForm">
 
@@ -63,20 +63,12 @@
     </form>
 </div>
 
-<div [hidden]="!submitted">
-  <h2>You submitted the following:</h2>
-  <div class="row">
-    <div class="col-xs-3">First name</div>
-    <div class="col-xs-9  pull-left">{{ model.firstName }}</div>
-  </div>
-  <div class="row">
-    <div class="col-xs-3">Last Name</div>
-    <div class="col-xs-9 pull-left">{{ model.lastName }}</div>
-  </div>
-  <div class="row">
-    <div class="col-xs-3">Power</div>
-    <div class="col-xs-9 pull-left">{{ model.email }}</div>
-  </div>
-  <br>
+<div class="container bottompad" [hidden]="!submitted">
+  <h1>Thanks for Joining!</h1>
+  <h2>You are now an unpaid member and you've been added to our email list.</h2>
+  <p>First Name: {{ model.firstName }}</p>
+  <p>Last Name: {{ model.lastName }}</p>
+  <p>Email Address: {{ model.email }}</p>
+  <p>Student Number: {{ model.studentNumber }}</p>
   <button class="btn btn-primary" (click)="submitted=false">Edit</button>
 </div>
