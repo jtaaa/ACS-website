@@ -15,6 +15,7 @@
   @include gt-tablet {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
+    min-height: 200px;
   };
 }
 
