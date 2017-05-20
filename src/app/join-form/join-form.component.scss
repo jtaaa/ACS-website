@@ -69,7 +69,6 @@ button {
   border-radius: 5px;
   background-color: #42A948;
   border: none;
-  border-color: lightgreen;
   color: white;
   font-size: 20px;
 }
@@ -80,6 +79,10 @@ button:focus {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(173,216,230,1);
   -moz-box-shadow: 0px 0px 10px 1px rgba(173,216,230,1);
   box-shadow: 0px 0px 10px 1px rgba(173,216,230,1);
+}
+
+button:disabled {
+  background-color: #DDD;
 }
 
 .alert-danger {
