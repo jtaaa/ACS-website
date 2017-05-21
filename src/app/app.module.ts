@@ -14,6 +14,11 @@ export class MyHammerConfig extends HammerGestureConfig {
   }
 }
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
@@ -37,6 +42,9 @@ import { JoinFormComponent } from './join-form/join-form.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
