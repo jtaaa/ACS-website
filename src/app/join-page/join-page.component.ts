@@ -15,6 +15,8 @@ export class JoinPageComponent implements OnInit {
 }
 
 export class MemberData {
+  public paid: boolean = false;
+
   constructor(
     public firstName: string,
     public lastName: string,
