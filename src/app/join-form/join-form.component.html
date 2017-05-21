@@ -1,6 +1,6 @@
-<div class="container" [hidden]="submitted">
+<div class="container" [hidden]="submitted || deleted">
     <h1>One of Us!</h1>
-    <form (ngSubmit)="onSubmit()" #joinForm="ngForm">
+    <form (ngSubmit)="onSubmit(joinForm)" #joinForm="ngForm">
 
       <div class="form-group">
         <label for="firstName"><h3>First Name</h3></label>
@@ -63,12 +63,19 @@
     </form>
 </div>
 
-<div class="container bottompad" [hidden]="!submitted">
+<div class="container" [hidden]="!submitted || deleted">
   <h1>Thanks for Joining!</h1>
-  <h2>You are now an unpaid member and you've been added to our email list.</h2>
+  <h2>You are now a member and you've been added to our email list.</h2>
   <p>First Name: {{ model.firstName }}</p>
   <p>Last Name: {{ model.lastName }}</p>
   <p>Email Address: {{ model.email }}</p>
   <p>Student Number: {{ model.studentNumber }}</p>
-  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  <button class="btn edit" (click)="onEdit(model)">Edit</button>
+  <button class="btn delete" (click)="delete(model.studentNumber)">Delete</button>
+</div>
+
+<div class="container deleted" [hidden]="!deleted">
+  <h1>Your info has been deleted!</h1>
+  <h2>Feel free to rejoin at any time.</h2>
+  <button class="btn edit" (click)="deleted = false;">Join</button>
 </div>

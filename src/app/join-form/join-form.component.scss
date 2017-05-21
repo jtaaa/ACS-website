@@ -9,10 +9,6 @@ h2 {
   text-align: center;
 }
 
-.bottompad {
-  padding-bottom: 10px;
-}
-
 form {
   width: 90%;
   max-width: 500px;
@@ -73,6 +69,7 @@ input:focus {
 
 button {
   padding: 7px 15px;
+  margin: 10px;
   margin-top: 25px;
   border-radius: 5px;
   background-color: #42A948;
@@ -91,6 +88,13 @@ button:focus {
 
 button:disabled {
   background-color: #DDD;
+}
+
+.deleted {
+  text-align: center;
+}
+button.delete {
+  background-color: #a94442;
 }
 
 .alert-danger {
