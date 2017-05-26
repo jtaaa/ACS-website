@@ -1,0 +1,116 @@
+@import "../../assets/styles/_breakpoints";
+
+.app-header {
+  background-image: url("../../assets/images/sunset.jpg");
+
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100px;
+
+  color: white;
+
+  @include gt-tablet {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    min-height: 200px;
+  };
+}
+
+.hide-mobile {
+  display: none;
+
+  @include gt-tablet {
+    display: block;
+  };
+}
+
+.main-body {
+  -webkit-box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.5);
+  box-shadow: 0px -3px 5px -2px rgba(0,0,0,0.5);
+
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 1em;
+    text-decoration: underline;
+
+    @include gt-tablet{
+      text-align: left;
+      font-size: 48px;
+    };
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: thick;
+    text-decoration: underline;
+    margin-top: 2em;
+    margin-left: 20px;
+
+    @include gt-tablet{
+      font-size: 32px;
+    };
+  }
+
+  p {
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+
+.events {
+
+  h1 {
+    font-size: 24px;
+    text-decoration: none;
+
+    @include gt-tablet {
+      font-size: 32px;
+    };
+  }
+
+  p {
+    font-size: 12px;
+
+    @include gt-tablet {
+      font-size: 18px;
+    };
+  }
+
+  .button {
+    margin-top: 0;
+
+    @include gt-tablet {
+      margin-top: 2em
+    };
+  }
+}
+
+.flexy {
+
+  @include gt-tablet {
+    display: flex;
+  };
+}
+
+.event-images {
+
+  @include gt-tablet {
+    flex-grow: 3;
+  };
+}
+
+.event-description {
+  text-align: center;
+  margin-bottom: 2em;
+
+  @include gt-tablet {
+    padding-left: 15px;
+    flex-grow: 1;
+    max-width: 335px;
+  };
+}

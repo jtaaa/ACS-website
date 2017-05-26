@@ -27,6 +27,7 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { JoinPageComponent } from './join-page/join-page.component';
 import { JoinFormComponent } from './join-form/join-form.component';
+import { CalendarPageComponent } from './calendar-page/calendar-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { JoinFormComponent } from './join-form/join-form.component';
     SlideshowComponent,
     AboutPageComponent,
     JoinPageComponent,
-    JoinFormComponent
+    JoinFormComponent,
+    CalendarPageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +61,10 @@ import { JoinFormComponent } from './join-form/join-form.component';
       {
         path: 'join',
         component: JoinPageComponent
+      },
+      {
+        path: 'calendar',
+        component: CalendarPageComponent
       }
     ])
   ],

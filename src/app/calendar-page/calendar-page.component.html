@@ -1,0 +1,38 @@
+<header class="app-header">
+  <nav-header></nav-header>
+  <div class="container hide-mobile">
+    <h1>Association of Caribbean Students</h1>
+  </div>
+</header>
+
+<div class="main-body">
+  <div class="container-lg">
+
+    <h1>Upcoming Events</h1>
+    <div class="events">
+      <div *ngFor="let event of events" class="flexy">
+        <div class="event-images">
+          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+        </div>
+        <div class="event-description">
+          <h1>{{ event.title }}</h1>
+          <p>{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <h1>Past Events</h1>
+    <div class="events">
+      <div *ngFor="let event of pastEvents" class="flexy">
+        <div class="event-images">
+          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+        </div>
+        <div class="event-description">
+          <h1>{{ event.title }}</h1>
+          <p>{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
