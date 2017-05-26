@@ -97,7 +97,7 @@
 
 .button {
   text-align: center;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 4em;
 
   a {
@@ -135,10 +135,10 @@
   }
 
   .button {
-    margin-top: -2em;
+    margin-top: 0;
 
     @include gt-tablet {
-      margin-top: 2em;
+      margin-top: 2em
     };
   }
 }
