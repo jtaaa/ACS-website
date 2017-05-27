@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import {
   trigger,
   state,
@@ -6,6 +7,11 @@ import {
   animate,
   transition
 } from '@angular/animations';
+
+import { SSImage } from '../slideshow/SSImage';
+
+
+let IMG_PATH = './assets/images/'
 
 @Component({
   selector: 'slideshow',
@@ -33,16 +39,45 @@ import {
 })
 export class SlideshowComponent implements OnInit {
 
-  @Input() images: any[];
+  imagesRaw: FirebaseListObservable<any[]>;
+  images: SSImage[] = [];
+  imageCount: number;
 
   @Input() heightPercent: number = 56.25;
-
   @Input() curPos: number = 1;
+  @Input() dbPath: string;
 
-  constructor() {
+
+  constructor(private db: AngularFireDatabase) {
   }
 
   ngOnInit() {
+    console.log(this.dbPath);
+    let dbPeopleImageCount = this.db.object(this.dbPath + '/count', { preserveSnapshot: true })
+    dbPeopleImageCount.subscribe(snapshot => {
+      this.imageCount = snapshot.val();
+      console.log(this.imageCount);
+    });
+    this.imagesRaw = this.db.list(this.dbPath + '/images', { preserveSnapshot: true });
+    this.imagesRaw.subscribe(snapshots => {
+      let curImageNum: number = 1;
+      let mid: number = Math.floor(this.imageCount / 2);
+      snapshots.forEach(snapshot => {
+        let curImageState: string;
+        if (curImageNum < this.curPos) {
+          curImageState = 'left';
+        } else if (curImageNum > this.curPos) {
+          curImageState = 'right';
+        } else {
+          curImageState = 'center';
+        }
+        this.images.push({
+          src: IMG_PATH + snapshot.val(),
+          pos: curImageNum++,
+          state: curImageState
+        });
+      })
+    });
   }
 
   scrollLeft() {
@@ -55,7 +90,7 @@ export class SlideshowComponent implements OnInit {
     }
   }
   scrollRight() {
-    if (this.curPos < this.images.length) {
+    if (this.curPos < this.imageCount) {
       this.curPos += 1;
       this.updateCenter();
     }
