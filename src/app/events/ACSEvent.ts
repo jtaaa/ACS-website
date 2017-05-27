@@ -3,5 +3,5 @@ export class ACSEvent {
   name: string;
   description: string;
   date: string;
-  images: object[];
+  dbImagesPath: string;
 }
