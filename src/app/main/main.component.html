@@ -30,7 +30,7 @@
 
   <div class="container">
     <h2>The People</h2>
-    <slideshow [images]="peopleImages" [curPos]="toFloat('4')"></slideshow>
+    <slideshow [curPos]="toFloat('4')" [dbPath]="peopleImagesDBPath"></slideshow>
     <p>The ACS is a group of fun-loving people with similar backgrounds that come together to share their rich cultures.</p>
     <div class="button">
       <a [routerLink]="['join']">Become a member</a>
@@ -46,7 +46,7 @@
       <h3>Upcoming Events</h3>
       <div *ngFor="let event of events" class="flexy">
         <div class="event-images">
-          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+          <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
         <div class="event-description">
           <h1>{{ event.name }}</h1>
@@ -57,7 +57,7 @@
       <h3>Past Events</h3>
       <div *ngFor="let event of pastEvents" class="flexy">
         <div class="event-images">
-          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+          <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
         <div class="event-description">
           <h1>{{ event.name }}</h1>

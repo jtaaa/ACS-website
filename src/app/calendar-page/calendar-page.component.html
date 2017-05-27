@@ -12,7 +12,7 @@
     <div class="events">
       <div *ngFor="let event of events" class="flexy">
         <div class="event-images">
-          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+          <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
         <div class="event-description">
           <h1>{{ event.name }}</h1>
@@ -25,7 +25,7 @@
     <div class="events">
       <div *ngFor="let event of pastEvents" class="flexy">
         <div class="event-images">
-          <slideshow [images]="event.images" [heightPercent]="toFloat('37.62')"></slideshow>
+          <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
         <div class="event-description">
           <h1>{{ event.name }}</h1>
