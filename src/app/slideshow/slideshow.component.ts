@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 import {
   trigger,
   state,
@@ -52,11 +53,9 @@ export class SlideshowComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.dbPath);
     let dbPeopleImageCount = this.db.object(this.dbPath + '/count', { preserveSnapshot: true })
     dbPeopleImageCount.subscribe(snapshot => {
       this.imageCount = snapshot.val();
-      console.log(this.imageCount);
     });
     this.imagesRaw = this.db.list(this.dbPath + '/images', { preserveSnapshot: true });
     this.imagesRaw.subscribe(snapshots => {
