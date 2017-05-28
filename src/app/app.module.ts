@@ -28,6 +28,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { JoinPageComponent } from './join-page/join-page.component';
 import { JoinFormComponent } from './join-form/join-form.component';
 import { CalendarPageComponent } from './calendar-page/calendar-page.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CalendarPageComponent } from './calendar-page/calendar-page.component';
     AboutPageComponent,
     JoinPageComponent,
     JoinFormComponent,
-    CalendarPageComponent
+    CalendarPageComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
