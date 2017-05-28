@@ -1,36 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 import { ACSEvent } from '../events/ACSEvent';
-import { EventService } from '../events/event.service';
-
-let IMG_PATH = './assets/images/'
 
 @Component({
   selector: 'calendar-page',
   templateUrl: './calendar-page.component.html',
-  styleUrls: ['./calendar-page.component.scss'],
-  providers: [EventService]
+  styleUrls: ['./calendar-page.component.scss']
 })
 export class CalendarPageComponent implements OnInit {
 
-  events: ACSEvent[];
-  pastEvents: ACSEvent[];
+  events: FirebaseListObservable<ACSEvent[]>;
+  pastEvents: FirebaseListObservable<ACSEvent[]>;
+  upcomingEventsExist: boolean = false;
 
-  constructor(private eventService: EventService) {
+  constructor(private db: AngularFireDatabase) {
   }
 
   getEvents(): void {
-    this.eventService.getEvents().then(events => this.events = events);
-  }
-
-  getPastEvents(): void {
-    this.eventService.getPastEvents().then(events => this.pastEvents = events);
+    this.events = this.db.list('events', {
+      query: {
+        orderByChild: 'date',
+        startAt: new Date(Date.now()).toISOString(),
+        limitToFirst: 2
+      }
+    });
+    this.events.subscribe(snapshots => {
+      if (snapshots.length) {
+        this.upcomingEventsExist = true;
+      }
+    })
+    this.pastEvents = this.db.list('events', {
+      query: {
+        orderByChild: 'date',
+        endAt: new Date(Date.now()).toISOString(),
+        limitToLast: 4
+      }
+    });
   }
 
 
   ngOnInit(): void {
     this.getEvents();
-    this.getPastEvents();
+  }
+
+  toReadableDate(dateString): string {
+    return new Date(dateString).toDateString()
   }
 
   toFloat(s) {

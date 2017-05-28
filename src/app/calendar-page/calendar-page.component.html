@@ -8,9 +8,12 @@
 <div class="main-body">
   <div class="container-lg">
 
+    <ng-container *ngIf="upcomingEventsExist">
     <h1>Upcoming Events</h1>
     <div class="events">
-      <div *ngFor="let event of events" class="flexy">
+      <ng-container *ngFor="let event of events | async | reverse">
+      <h2>{{ event.date }}</h2>
+      <div class="flexy">
         <div class="event-images">
           <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
@@ -19,11 +22,15 @@
           <p>{{ event.description }}</p>
         </div>
       </div>
+      </ng-container>
     </div>
+  </ng-container>
 
     <h1>Past Events</h1>
     <div class="events">
-      <div *ngFor="let event of pastEvents" class="flexy">
+      <ng-container *ngFor="let event of pastEvents | async | reverse">
+      <h3>{{ toReadableDate(event.date) }}</h3>
+      <div class="flexy">
         <div class="event-images">
           <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
@@ -32,6 +39,7 @@
           <p>{{ event.description }}</p>
         </div>
       </div>
+      </ng-container>
     </div>
 
   </div>
