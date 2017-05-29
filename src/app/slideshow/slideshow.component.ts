@@ -11,9 +11,6 @@ import {
 
 import { SSImage } from '../slideshow/SSImage';
 
-
-let IMG_PATH = './assets/images/'
-
 @Component({
   selector: 'slideshow',
   templateUrl: './slideshow.component.html',
@@ -71,7 +68,7 @@ export class SlideshowComponent implements OnInit {
           curImageState = 'center';
         }
         this.images.push({
-          src: IMG_PATH + snapshot.val(),
+          src: snapshot.val(),
           pos: curImageNum++,
           state: curImageState
         });
