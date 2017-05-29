@@ -49,4 +49,8 @@ export class MainComponent implements OnInit {
     return parseFloat(s);
   }
 
+  toReadableDate(dateString): string {
+    return new Date(dateString).toDateString()
+  }
+
 }
