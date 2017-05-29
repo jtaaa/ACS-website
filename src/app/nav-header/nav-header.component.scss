@@ -81,7 +81,7 @@ h2 {
   right: 1em;
   cursor: pointer;
   overflow: hidden;
-  z-index: 1;
+  z-index: 101;
 
   @include gt-tablet {
     display: none;
