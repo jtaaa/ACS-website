@@ -12,7 +12,7 @@
     <h1>Upcoming Events</h1>
     <div class="events">
       <ng-container *ngFor="let event of events | async | reverse">
-      <h2>{{ event.date }}</h2>
+      <h2>{{ toReadableDate(event.date) }}</h2>
       <div class="flexy">
         <div class="event-images">
           <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
