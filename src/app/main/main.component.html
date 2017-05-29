@@ -46,11 +46,12 @@
       <ng-container *ngIf="upcomingEventsExist">
       <h3>Upcoming Events</h3>
       <div *ngFor="let event of events | async | reverse" class="flexy">
-        <div class="event-images">
+        <div *ngIf="event.dbImagesPath" class="event-images">
           <slideshow [dbPath]="event.dbImagesPath" [heightPercent]="toFloat('37.62')"></slideshow>
         </div>
-        <div class="event-description">
+        <div class="event-description" [class.event-description-wide]="!event.dbImagesPath">
           <h1>{{ event.name }}</h1>
+          <h4>{{ toReadableDate(event.date) }}</h4>
           <p>{{ event.description }}</p>
         </div>
       </div>
