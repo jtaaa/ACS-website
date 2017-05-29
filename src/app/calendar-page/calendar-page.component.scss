@@ -115,3 +115,13 @@
     max-width: 335px;
   };
 }
+
+
+.event-description-wide {
+  max-width: none;
+
+  @include gt-tablet {
+    padding-left: 100px;
+    padding-right: 100px;
+  };
+}
