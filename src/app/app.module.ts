@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
@@ -18,6 +18,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -29,7 +31,12 @@ import { JoinPageComponent } from './join-page/join-page.component';
 import { JoinFormComponent } from './join-form/join-form.component';
 import { CalendarPageComponent } from './calendar-page/calendar-page.component';
 import { ReversePipe } from './pipes/reverse.pipe';
-import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+
+import { AdminModule } from './admin/admin.module';
+import { LoginRoutingModule } from './admin/login-routing.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +50,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     JoinFormComponent,
     CalendarPageComponent,
     ReversePipe,
-    AdminPageComponent
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
     HttpModule,
+    LoginRoutingModule,
+    AdminModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -71,8 +80,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
         component: CalendarPageComponent
       },
       {
-        path: 'admin',
-        component: AdminPageComponent
+        path: 'login',
+        component: AdminLoginComponent
       }
     ])
   ],
@@ -84,4 +93,9 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // Diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
