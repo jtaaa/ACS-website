@@ -1,0 +1,29 @@
+@import "../../../assets/styles/_breakpoints";
+
+.container {
+    text-align: center;
+}
+
+#acslogo {
+    max-width: 300px;
+    width: 70%;
+    margin-top: 25%;
+    margin-bottom: 20px;
+
+    @include gt-tablet{
+        font-size: 48px;
+        margin-top: 100px;
+    };
+}
+
+.login > button {
+    margin-top: 10px;
+
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+
+    p {
+        margin: 10px;
+    }
+}

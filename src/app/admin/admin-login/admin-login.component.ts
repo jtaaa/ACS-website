@@ -3,13 +3,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 
 @Component({
-  template: `
-    <h2>LOGIN</h2>
-    <p>{{message}}</p>
-    <p>
-      <button (click)="login()"  *ngIf="!authService.authenticated">Login</button>
-      <button (click)="logout()" *ngIf="authService.authenticated">Logout</button>
-    </p>`
+  templateUrl: './admin-login.component.html',
+  styleUrls: ['./admin-login.component.scss']
 })
 export class AdminLoginComponent {
   message: string;

@@ -1,3 +1,9 @@
-<p>
-  admin-login works!
-</p>
+<div class="container">
+  <img id="acslogo" src="../../../assets/images/UW-ACS-logo-red-big.png" alt="ACS Logo - Red palm tree">
+  <h2>ACS Exec Portal Login</h2>
+  <span class="login">
+    <button (click)="login()"  *ngIf="!authService.authenticated"><p>Login</p></button>
+    <button (click)="logout()" *ngIf="authService.authenticated"><p>Logout</p></button>
+  </span>
+</div>
+
