@@ -34,7 +34,7 @@ export class CalendarPageComponent implements OnInit {
       query: {
         orderByChild: 'date',
         endAt: new Date(Date.now()).toISOString(),
-        limitToLast: 4
+        limitToLast: 10
       }
     });
   }
