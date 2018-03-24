@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { MemberData } from '../join-page/join-page.component'
 
 @Component({
@@ -15,7 +15,7 @@ export class JoinFormComponent implements OnInit {
   deleted: boolean = false;
   prevStudentNumber: string = '';
 
-  memberList: FirebaseListObservable<any[]>;
+  memberList: AngularFireList<any>;
 
   onSubmit(form) {
     this.submitted = true;

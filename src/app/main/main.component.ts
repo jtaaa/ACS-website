@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 import { ACSEvent } from '../events/ACSEvent';
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
@@ -12,33 +13,40 @@ import { ACSEvent } from '../events/ACSEvent';
 export class MainComponent implements OnInit {
 
   peopleImagesDBPath: string = 'peopleImages';
-  events: FirebaseListObservable<ACSEvent[]>;
-  pastEvents: FirebaseListObservable<ACSEvent[]>;
+  events: Observable<ACSEvent[]>
+  pastEvents: Observable<ACSEvent[]>
+  eventsList: AngularFireList<ACSEvent>;
+  pastEventsList: AngularFireList<ACSEvent>;
   upcomingEventsExist: boolean = false;
 
   constructor(private db: AngularFireDatabase) {
   }
 
   getEvents(): void {
-    this.events = this.db.list('events', {
-      query: {
-        orderByChild: 'date',
-        startAt: new Date(Date.now()).toISOString(),
-        limitToFirst: 2
-      }
-    });
-    this.events.subscribe(snapshots => {
+    this.eventsList = this.db.list<ACSEvent>('events', ref =>
+      ref.orderByChild('date')
+        .startAt(new Date(Date.now()).toISOString())
+        .limitToFirst(2)
+    );
+    // {
+    //   query: {
+    //     orderByChild: 'date',
+    //     startAt: new Date(Date.now()).toISOString(),
+    //     limitToFirst: 2
+    //   }
+    // }
+    this.eventsList.valueChanges().subscribe(snapshots => {
       if (snapshots.length) {
         this.upcomingEventsExist = true;
       }
-    })
-    this.pastEvents = this.db.list('events', {
-      query: {
-        orderByChild: 'date',
-        endAt: new Date(Date.now()).toISOString(),
-        limitToLast: 3
-      }
     });
+    this.pastEventsList = this.db.list<ACSEvent>('events', ref =>
+      ref.orderByChild('date')
+        .endAt(new Date(Date.now()).toISOString())
+        .limitToLast(3)
+    );
+    this.events = this.eventsList.valueChanges();
+    this.pastEvents = this.pastEventsList.valueChanges();
   }
 
   ngOnInit(): void {

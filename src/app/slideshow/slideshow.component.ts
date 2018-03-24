@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 import {
   trigger,
@@ -37,7 +37,7 @@ import { SSImage } from '../slideshow/SSImage';
 })
 export class SlideshowComponent implements OnInit {
 
-  imagesRaw: FirebaseListObservable<any[]>;
+  imagesRaw: AngularFireList<any>;
   images: SSImage[] = [];
   imageCount: number;
 
@@ -50,12 +50,12 @@ export class SlideshowComponent implements OnInit {
   }
 
   ngOnInit() {
-    let dbPeopleImageCount = this.db.object(this.dbPath + '/count', { preserveSnapshot: true })
+    let dbPeopleImageCount = this.db.object(this.dbPath + '/count').snapshotChanges();
     dbPeopleImageCount.subscribe(snapshot => {
-      this.imageCount = snapshot.val();
+      this.imageCount = snapshot.payload.val();
     });
-    this.imagesRaw = this.db.list(this.dbPath + '/images', { preserveSnapshot: true });
-    this.imagesRaw.subscribe(snapshots => {
+    this.imagesRaw = this.db.list(this.dbPath + '/images');
+    this.imagesRaw.snapshotChanges().subscribe(snapshots => {
       let curImageNum: number = 1;
       let mid: number = Math.floor(this.imageCount / 2);
       snapshots.forEach(snapshot => {
@@ -68,12 +68,13 @@ export class SlideshowComponent implements OnInit {
           curImageState = 'center';
         }
         this.images.push({
-          src: snapshot.val(),
+          src: snapshot.payload.val(),
           pos: curImageNum++,
           state: curImageState
         });
       })
     });
+    console.log(this.images);
   }
 
   scrollLeft() {

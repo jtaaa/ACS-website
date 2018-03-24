@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 import { ACSEvent } from '../events/ACSEvent';
 
@@ -10,33 +11,33 @@ import { ACSEvent } from '../events/ACSEvent';
 })
 export class CalendarPageComponent implements OnInit {
 
-  events: FirebaseListObservable<ACSEvent[]>;
-  pastEvents: FirebaseListObservable<ACSEvent[]>;
+  events: Observable<ACSEvent[]>
+  pastEvents: Observable<ACSEvent[]>
+  eventsList: AngularFireList<ACSEvent>;
+  pastEventsList: AngularFireList<ACSEvent>;
   upcomingEventsExist: boolean = false;
 
   constructor(private db: AngularFireDatabase) {
   }
 
   getEvents(): void {
-    this.events = this.db.list('events', {
-      query: {
-        orderByChild: 'date',
-        startAt: new Date(Date.now()).toISOString(),
-        limitToFirst: 2
-      }
-    });
-    this.events.subscribe(snapshots => {
+    this.eventsList = this.db.list('events', ref =>
+      ref.orderByChild('date')
+        .startAt(new Date(Date.now()).toISOString())
+        .limitToFirst(2)
+    );
+    this.eventsList.valueChanges().subscribe(snapshots => {
       if (snapshots.length) {
         this.upcomingEventsExist = true;
       }
     })
-    this.pastEvents = this.db.list('events', {
-      query: {
-        orderByChild: 'date',
-        endAt: new Date(Date.now()).toISOString(),
-        limitToLast: 10
-      }
-    });
+    this.pastEventsList = this.db.list('events', ref =>
+      ref.orderByChild('date')
+        .endAt(new Date(Date.now()).toISOString())
+        .limitToLast(10)
+    );
+    this.events = this.eventsList.valueChanges();
+    this.pastEvents = this.pastEventsList.valueChanges();
   }
 
 
