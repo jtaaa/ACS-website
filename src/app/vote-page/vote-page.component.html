@@ -1,0 +1,30 @@
+<header class="app-header">
+  <nav-header></nav-header>
+  <div class="container hide-mobile">
+    <h1>Association of Caribbean Students</h1>
+  </div>
+</header>
+<div class="container">
+  <h2>Positions to be voted for: </h2>
+  <ul>
+    <li *ngFor="let position of positions | async">
+        <p>{{ position.name }}</p>
+    </li>
+  </ul>
+  <div *ngFor="let position of positions | async">
+      <h2>Who would you like to vote for position of {{ position.name }}?</h2>
+      <div class="selectionContainer">
+        <div *ngFor="let candidate of position.candidates | reverse"
+            class="selection button">
+          <a (click)="selectCandidate(position.name, candidate.id)"
+              [style.background]="vote[position.name] === candidate.id ? 'red' : 'pink'">
+            {{ candidate.name }}
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="button submit">
+  <a (click)="submit()">Submit!</a>
+</div>
+

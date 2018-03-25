@@ -30,6 +30,7 @@ import { JoinFormComponent } from './join-form/join-form.component';
 import { CalendarPageComponent } from './calendar-page/calendar-page.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { VotePageComponent } from './vote-page/vote-page.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     JoinFormComponent,
     CalendarPageComponent,
     ReversePipe,
-    AdminPageComponent
+    AdminPageComponent,
+    VotePageComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +75,10 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
       {
         path: 'admin',
         component: AdminPageComponent
+      },
+      {
+        path: 'vote',
+        component: VotePageComponent
       }
     ])
   ],
